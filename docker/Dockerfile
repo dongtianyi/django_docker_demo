@@ -21,5 +21,5 @@ WORKDIR /hg_backend
 # ADD docker/supervisord.conf /etc/supervisord.conf
 # RUN python3 ./manage.py runserver 8001
 # CMD ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
-CMD ["python3", "manage.py", "runserver", "8001"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8001"]
 EXPOSE 8001
