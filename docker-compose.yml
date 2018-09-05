@@ -1,7 +1,10 @@
 version: '3'
-services:
 
-  web:
+services:
+  backend:
     build: .
+    command: python3 manage.py runserver 0.0.0.0:8001
+    volumes:
+      - .:/hg_backend
     ports:
-     - "8001:8001"
+      - "8008:8001"
